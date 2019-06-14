@@ -1,13 +1,18 @@
 import React from 'react';
-import Counter from './components/Counter';
+import FullName from './components/FullName';
+import FirstName from './components/FirstName';
+import LastName from './components/LastName';
+import Tasks from './components/Tasks';
 import './App.css';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Counter />
-      <Counter />
-      <Counter />
+      <FullName />
+      <FirstName />
+      <LastName />
+      <br />
+      <Tasks />
     </div>
   );
 };
