@@ -4,12 +4,11 @@ import TaskStore from '../stores/taskStore';
 
 const Tasks = observer(() => {
   console.log('Tasks render');
-  const taskStore = useContext(TaskStore);
-  const { tasks } = taskStore;
+  const { tasks, addTask } = useContext(TaskStore);
 
   useEffect(() => {
-    setTimeout(() => tasks.push('inserted task after 3 seconds'), 3000);
-    setTimeout(() => tasks.push('inserted task after 5 seconds'), 5000);
+    setTimeout(() => addTask('inserted task after 3 seconds'), 3000);
+    setTimeout(() => addTask('inserted task after 5 seconds'), 5000);
   }, []);
 
   return (
