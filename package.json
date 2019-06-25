@@ -9,10 +9,11 @@
     "@types/react": "16.8.19",
     "@types/react-dom": "16.8.4",
     "mobx": "^5.10.1",
+    "mobx-react": "^6.1.1",
     "mobx-react-lite": "^2.0.0-alpha.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
+    "wonky-scripts": "0.0.5",
     "typescript": "3.5.1"
   },
   "scripts": {
