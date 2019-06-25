@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { observer } from 'mobx-react-lite';
+import { observer } from 'mobx-react';
 import UserStore from '../stores/userStore';
 
 type InputEvent = React.ChangeEvent<HTMLInputElement>;

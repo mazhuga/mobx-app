@@ -5,7 +5,7 @@ configure({ enforceActions: 'observed' });
 
 export class Tasks {
   // values
-  tasks: string[] = ['Task 1', 'Task 2'];
+  tasks: string[] = ['Task 2', 'Task 2'];
   // actions
   addTask = (task: string) => this.tasks.push(task);
 }
