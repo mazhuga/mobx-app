@@ -53,7 +53,7 @@ export class Tasks {
 decorate(Tasks, {
   tasks: observable,
   remove: action,
-    add: action,
+  add: action,
 });
 
 export default createContext(new Tasks());
