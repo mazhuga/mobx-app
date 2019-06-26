@@ -1,23 +1,22 @@
 import React, { useContext, useEffect } from 'react';
 import { observer } from 'mobx-react';
-import TaskStore from '../stores/taskStore';
+import Task from './Task';
+import TaskStore, { task } from '../stores/taskStore';
 
 const Tasks = observer(() => {
   console.log('Tasks render');
-  const { tasks, addTask } = useContext(TaskStore);
+  const { tasks, remove, add } = useContext(TaskStore);
 
   useEffect(() => {
-    setTimeout(() => addTask('inserted task after 3 seconds'), 3000);
-    setTimeout(() => addTask('inserted task after 5 seconds'), 5000);
+    setTimeout(() => add('inserted task after 3 seconds'), 3000);
+    setTimeout(() => add('inserted task after 5 seconds'), 5000);
   }, []);
 
   return (
     <ul>
-      {tasks.map(
-        (task: string, index: number): any => (
-          <li key={index}>{task}</li>
-        ),
-      )}
+      {tasks.map((data: task) => (
+        <Task key={data.id} task={data} remove={remove} />
+      ))}
     </ul>
   );
 });
